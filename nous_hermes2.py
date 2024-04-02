@@ -20,7 +20,8 @@ with open("new_material.txt", 'r') as file:
 input_text = outdated_text + reference_text
 
 # Hardcoded Prompt
-prompt = f"Please examine both documents. Based on the new content, can you find outdated information in the old user guide?:\n{input_text}"
+#prompt = f"Please examine both documents. Based on the new content, can you find outdated information in the old user guide?:\n{input_text}"
+prompt = f"Based on the new content in the reference material, there are several outdated pieces of information in the old user guide. Can you identify these?\n{input_text}"
 
 # Generate text using Nous-Hermes2(LLM)
 with model.chat_session():
